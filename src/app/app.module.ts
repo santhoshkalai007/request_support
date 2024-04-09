@@ -12,17 +12,17 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { StarratingComponent } from './starrating/starrating.component';
-import { SubmitformComponent } from './submitform/submitform.component';
+import { submitformComponent } from './submitform/submitform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
      ControlComponent,
      StarratingComponent,
-     SubmitformComponent
+     submitformComponent
      
   ],
-  imports: [
+  imports: [ 
     FeedbackModule ,
     BrowserModule,
     AppRoutingModule,

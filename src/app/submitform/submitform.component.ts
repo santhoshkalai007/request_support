@@ -6,7 +6,7 @@ import { AppService } from '../app.service';
   templateUrl: './submitform.component.html',
   styleUrl: './submitform.component.css'
 })
-export class SubmitformComponent {
+export class submitformComponent {
   processing = false;
   showsuccessmessage = false;
 
