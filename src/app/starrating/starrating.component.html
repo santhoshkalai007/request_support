@@ -1,0 +1,4 @@
+<span *ngFor="let _ of getStars(); let i = index">
+    <i class="fa" [ngClass]="{'fa-star': isFilled(i), 'fa-star-o': !isFilled(i)}"></i>
+  </span>
+  <app-starrating [rating]="3" [maxRating]="5"></app-starrating>

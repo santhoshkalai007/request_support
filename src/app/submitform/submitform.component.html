@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <form [formGroup]="reactiveform" (ngSubmit)="onSubmit(reactiveform.value)">
+        <div class="form ">
+          <label for="name ">Name:</label>
+          <input formControlName="name" [ngClass]="reactiveform.value.name == '' && submitted ?'invalid':''" type="text"
+            class="form-control" />
+          <div>
+            <small style="color: rgb(255, 0, 0);" *ngIf="reactiveform.value.name == '' && submitted">
+              *first name Required
+            </small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email-Id:</label>
+          <input formControlName="email" [ngClass]="reactiveform.value.email== '' && submitted ?'invalid':''"
+            type="text" class="form-control" />
+        </div>
+        <div>
+          <small style="color: rgb(255, 0, 0);" *ngIf="reactiveform.value.email == '' && submitted">
+            *email Required
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="phone_no">Phone no</label>
+          <input formControlName="phone_no" [ngClass]="reactiveform.value.phone_no== '' && submitted ?'invalid':''"
+            type="number" class="form-control" />
+        </div>
+        <div>
+          <small style="color: rgb(255, 0, 0);" *ngIf="reactiveform.value.phone_no == '' && submitted">
+            *phone number Required
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="company_name">Company Name</label>
+          <input formControlName="company_name" [ngClass]="reactiveform.value.name== '' && submitted ?'invalid':''"
+            type="text" class="form-control" />
+        </div>
+        <div>
+          <small style="color: rgb(255, 0, 0);" *ngIf="reactiveform.value.name== '' && submitted">
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input formControlName="subject" [ngClass]="reactiveform.touched.subject== '' && submitted ?'invalid':''"
+            type="text" class="form-control" />
+        </div>
+        <div>
+          <small style="color: rgb(255, 0, 0);" *ngIf="reactiveform.value.subject== '' && submitted">
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="details">Details</label>
+          <textarea formControlName="details" [ngClass]="reactiveform.touched.details== '' && submitted ?'invalid':''"
+            type="textarea" class="form-control">  </textarea>
+        </div>
+        <div>
+          <small style="color: rgb(255, 0, 0);" *ngIf="reactiveform.value.details== '' && submitted">
+          </small>
+        </div>
+        <br>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+        <div *ngIf="showsuccessmessage" class="showsuccessmessage">
+          submitted successfully!!
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

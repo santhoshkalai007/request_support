@@ -1,0 +1,9 @@
+.invalid{
+    border: 2px solid red !important;
+}
+.showsuccessmessage{
+    margin-top: 10px;
+    background-color: yellowgreen;
+    padding: 10px;
+    border-radius: 5px;
+}

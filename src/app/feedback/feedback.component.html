@@ -1,0 +1,23 @@
+<div class="one">Feedbacks&Ratings</div>
+<form [formGroup]="feedback" (ngSubmit)="onSubmit(feedback.value)">  
+  <div>
+
+    <div class="star">
+      <label for="starRating"></label>
+      <ngb-rating [max]=5 [(rate)]="currentRate" formControlName="rating" [readonly]="false"></ngb-rating>
+
+    </div>
+
+    <div class="feed">
+      <div>
+
+        <textarea type="text" class="form-control" type="textarea" formControlName="feedbacks"></textarea>
+      </div>
+      <br>
+      <button class="btn btn-primary" type="submit">Submit</button>
+
+
+
+    </div>
+  </div>
+</form>
