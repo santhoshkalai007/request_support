@@ -1,0 +1,109 @@
+<div>
+    <table mat-table class="table">
+        <tr>
+          <th class="w_12">ID</th>
+          <th class="w_12">NAME</th>
+          <th class="w_12">EMAIL</th>
+          <th class="w_12">PHONE NO</th>
+          <th class="w_12">COMPANY NAME</th>
+          <th class="w_12">ACTION</th>
+        </tr>
+        <tr class="text_center" *ngFor ="let list of lists; let i = index">
+          <td><span>{{list.id}}</span></td>
+          <td><span>{{list.name}}</span></td>
+          <td><span>{{list.email}}</span></td>
+          <td><span>{{list.phone_no}}</span></td> 
+          <td><span>{{list.company_name}}</span></td>
+          <td class="bg-grey">
+            <span class="pa-1 text_center border-rad-rgt">
+              <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                  <button *ngIf="list.status == 'Response Empty'" mat-menu-item (click)="onClick(list.id)">
+                    <mat-icon>list_alt</mat-icon>
+                    <span >Response</span>
+                  </button>
+                  <button *ngIf="list.status == 'Responsed'" mat-menu-item>
+                    <mat-icon>feedbacks</mat-icon>
+                    <span>Feedback & Rating</span>
+                  </button>
+              </mat-menu>
+            </span>
+          </td>
+        </tr>
+    </table>
+  </div>  
+
+
+<!-- <button type="button" (click)="fun()">Click me!</button> -->
+<!-- <div fxFlex="100">
+  <div fxLayout="row wrap">
+    <div fxFlex="100">
+      <div fxFlex="5">
+        ID
+      </div>
+      <div fxFlex="20">
+        NAME
+      </div>
+      <div fxFlex="25">
+        EMAIL
+      </div>
+      <div fxFlex="10">
+        PHONE NO
+      </div>
+      <div fxFlex="10">
+        COMPANY NAME
+      </div>
+      <div fxFlex="15">
+        SUBJECT
+      </div>
+      <div fxFlex="10">
+        DETAILS
+      </div>
+      <div fxFlex="5">
+        ACTION
+      </div>
+    </div>
+    <div *ngFor="let list of lists" fxFlex="100">
+      <div fxFlex="5">
+        <span>{{list.id}}</span>
+      </div>
+      <div fxFlex="20">
+        <span>{{list.name}}</span>
+      </div>
+      <div fxFlex="25">
+        <span>{{list.email}}</span>
+      </div>
+      <div fxFlex="10">
+        <span>{{list.phone_no}}</span>
+      </div>
+      <div fxFlex="10">
+        <span>{{list.company_name}}</span>
+      </div>
+      <div fxFlex="15">
+        <span>{{list.subject}}</span>
+      </div>
+      <div fxFlex="10">
+        <span>{{list.details}}</span>
+      </div>
+      <div fxFlex="5">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+      
+      </div>
+    </div>
+  </div>
+</div> -->
+ 

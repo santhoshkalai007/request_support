@@ -1,0 +1,16 @@
+
+  .btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #ccc;
+    background-color: #47ea32;
+    color: #333;
+  }
+   
+  .pa-2 {
+    padding: 2rem;
+  }
+
+  .mt-1 {
+    margin-top: 1rem;
+  }

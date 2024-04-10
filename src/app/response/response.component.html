@@ -1,0 +1,83 @@
+<div class="container">
+    <form [formGroup]="responseform">
+        <div fxFlex="100">
+            <div fxLayout="row wrap">
+                <div fxFlex="20">
+                </div>
+                <div fxFlex="50">
+                    <mat-card class="pa-2">
+                        <div>
+                            <div fxFlex="50">
+                                <label for="name">NAME</label>
+                            </div>
+                            <div fxFlex="50">
+                                <span>{{name}}</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <div fxFlex="50">
+                                <label for="email">EMAIL</label>
+                            </div>
+                            <div fxFlex="50">
+                                <span>{{email}}</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <div fxFlex="50">
+                                <label for="phone_no">PHONE NO</label>
+                            </div>
+                            <div fxFlex="50">
+                                <span>{{phone_no}}</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <div fxFlex="50">
+                                <label for="company_name">COMPANY NAME</label>
+                            </div>
+                            <div fxFlex="50">
+                                <span>{{company_name}}</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <div fxFlex="50">
+                                <label for="subject">SUBJECT</label>
+                            </div>
+                            <div fxFlex="50">
+                                <span>{{subject}}</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <div fxFlex="50">
+                                <label for="details">DETAILS</label>
+                            </div>
+                            <div fxFlex="50">
+                                <span>{{details}}</span>
+                            </div>
+                        </div>
+                        <div class="mt-1">
+                            <label for="response">RESPONSE</label>
+                        </div>
+                        <div class="mt-1">
+                            <textarea style="width: 100%;" id="response_message" name="response_message"
+                                formControlName="response_message"></textarea>
+                        </div>
+                        <br>
+                        <div class="row" >
+                            <input (click)="responsesubmit(responseform.value)" class="btn btn-danger" type="submit">
+                        </div>
+                    </mat-card>
+                </div>
+                <div fxFlex="20">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<!-- {{this.appService.view_details}} -->
