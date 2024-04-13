@@ -21,7 +21,7 @@ export class PhonenumberComponent {
   ngOnInit(): void {
     this.phoneform = this.formbuilder.group({
       phone_number: [''],
-      country_code: ['91']
+      country_code: ['']
     })
   }
   onSubmit(datas: any) {
