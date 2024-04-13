@@ -11,7 +11,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TestlistModule } from './testlist/testlist.module';
- 
+
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -19,7 +19,8 @@ import { ResponseComponent } from './response/response.component';
 import { TestlistComponent } from './testlist/testlist.component';
 
 const Routes: Routes=[
-{path:'',component:TestlistComponent},
+// {path:'',component:TestlistComponent},
+{path:'getlist',component:TestlistComponent},
 
 {path:'response/:id',component:ResponseComponent}
 ]

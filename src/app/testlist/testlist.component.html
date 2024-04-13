@@ -20,7 +20,7 @@
                 <mat-icon>more_vert</mat-icon>
               </button>
               <mat-menu #menu="matMenu">
-                  <button *ngIf="list.status == 'Response Empty'" mat-menu-item (click)="onClick(list.id)">
+                  <button  mat-menu-item (click)="onClick(list.id)">
                     <mat-icon>list_alt</mat-icon>
                     <span >Response</span>
                   </button>

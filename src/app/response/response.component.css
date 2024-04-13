@@ -6,7 +6,14 @@
     background-color: #47ea32;
     color: #333;
   }
-   
+  .btn-1{
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #ccc;
+    background-color: #4e24e6;
+    color: #ffffff;
+  }
+  
   .pa-2 {
     padding: 2rem;
   }

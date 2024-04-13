@@ -10,8 +10,11 @@
                             <div fxFlex="50">
                                 <label for="name">NAME</label>
                             </div>
-                            <div fxFlex="50">
+                            <div fxFlex="40">
                                 <span>{{name}}</span>
+                            </div>
+                            <div fxFlex="10">
+                                <button type="button" class="btn-1" (click)="back()">BACK</button>
                             </div>
                         </div>
                         <br>
@@ -59,15 +62,26 @@
                                 <span>{{details}}</span>
                             </div>
                         </div>
-                        <div class="mt-1">
-                            <label for="response">RESPONSE</label>
+                        <br>
+                        <div *ngIf="response_message == ''">
+                            <div class="mt-1">
+                                <label for="response">RESPONSE</label>
+                            </div>
+                            <div class="mt-1">
+                                <textarea style="width: 100%;" id="response_message" name="response_message"
+                                    formControlName="response_message"></textarea>
+                            </div>
                         </div>
-                        <div class="mt-1">
-                            <textarea style="width: 100%;" id="response_message" name="response_message"
-                                formControlName="response_message"></textarea>
+                        <div *ngIf="response_message != ''">
+                            <div fxFlex="50">
+                                <label for="response">RESPONSE</label>
+                            </div>
+                            <div fxFlex="50">
+                                <span>{{response_message}}</span>
+                            </div>
                         </div>
                         <br>
-                        <div class="row" >
+                        <div *ngIf="response_message == ''" class="row" >
                             <input (click)="responsesubmit(responseform.value)" class="btn btn-danger" type="submit">
                         </div>
                     </mat-card>
