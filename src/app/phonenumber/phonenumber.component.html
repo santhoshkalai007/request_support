@@ -1,0 +1,30 @@
+
+<form [formGroup] ="phoneform" (ngSubmit)="onSubmit(phoneform.value)">
+
+<div class="one">
+    countrycode
+    <div class="form-group">
+      <label for="country_code"></label>
+      <!-- <input formControlName="countryCode" [ngClass]="phoneform.value.email== '' && submitted ?'invalid':''"
+        type="text" class="form-control" /> -->
+      <select formControlName="country_code" [(ngModel)] ="country_code">
+        <option value="+1">USA (+1)</option>
+        <option value="+44">UK (+44)</option>
+        <option value="+91">INDIA (+91)</option>
+        <option value="+93">AFGHANISTAN (+93)</option>
+        <option value="+61">AUSTRALIA(+61)</option>
+      </select>
+     
+   
+    </div>
+    phonenumber
+    <div class="three">
+    <div class="form-group">
+      <label for="phone_number"></label>
+      <input formControlName="phone_number" [ngClass]="phoneform.value.email== '' && submitted ?'invalid':''"
+        type="number" class="form-control" />
+    </div>
+  </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+
+</div>

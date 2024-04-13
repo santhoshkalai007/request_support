@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SubmitformComponent } from './submitform.component';
+import { PhonenumberComponent } from './phonenumber.component';
 import { RouterModule } from '@angular/router';
 import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule,FormBuilder,FormGroup,FormsModule, } from '@angular/forms';
@@ -9,7 +9,7 @@ import { ReactiveFormsModule,FormBuilder,FormGroup,FormsModule, } from '@angular
 
 @NgModule({
   declarations: [
-    SubmitformComponent
+    PhonenumberComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +19,7 @@ import { ReactiveFormsModule,FormBuilder,FormGroup,FormsModule, } from '@angular
     FormsModule
   ],
   exports:[
-    SubmitformComponent
+    PhonenumberComponent
   ]
 })
-export class SubmitformModule { }
+export class PhonenumberModule { }

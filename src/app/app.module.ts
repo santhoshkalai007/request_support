@@ -12,14 +12,14 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { StarratingComponent } from './starrating/starrating.component';
-import { submitformComponent } from './submitform/submitform.component';
-
+import { SubmitformComponent } from './submitform/submitform.component';
+import { PhonenumberModule } from './phonenumber/phonenumber.module';
 @NgModule({
   declarations: [
     AppComponent,
      ControlComponent,
      StarratingComponent,
-     submitformComponent
+     SubmitformComponent
      
   ],
   imports: [ 
@@ -29,7 +29,7 @@ import { submitformComponent } from './submitform/submitform.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    
+    PhonenumberModule,
     NgbModule,
     MatIconModule,
     RouterModule,
